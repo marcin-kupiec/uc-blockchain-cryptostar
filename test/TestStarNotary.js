@@ -1,7 +1,7 @@
 const StarNotary = artifacts.require("StarNotary");
 
-var accounts;
-var owner;
+let accounts;
+let owner;
 
 contract('StarNotary', (accs) => {
     accounts = accs;
@@ -71,6 +71,12 @@ it('lets user2 buy a star and decreases its balance in ether', async() => {
     const balanceAfterUser2BuysStar = await web3.eth.getBalance(user2);
     let value = Number(balanceOfUser2BeforeTransaction) - Number(balanceAfterUser2BuysStar);
     assert.equal(value, starPrice);
+});
+
+it('has proper name and symbol', async() => {
+    const instance = await StarNotary.deployed();
+    assert.equal('Marcin Star Token', await instance.name());
+    assert.equal('MST', await instance.symbol());
 });
 
 // Implement Task 2 Add supporting unit tests
