@@ -6,6 +6,7 @@ This Starter Code has already implemented the functionalities you implemented in
 
 ### Project details
 
+```bash
 Token Name: Marcin Star Token
 Token Symbol: MST
 Token address on Rinkeby network: 0x5bFdE9825748B77bcffb60261D7B7039be8f7021
@@ -14,6 +15,7 @@ Truffle v5.0.2 (core: 5.0.2)
 Solidity v0.5.0 (solc-js)
 Node v10.24.1
 OpenZeppelin-solidity: .3.0
+```
 
 ### Dependencies
 For this project, you will need to have:
